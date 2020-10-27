@@ -5,12 +5,10 @@
         
         <style type="text/css">
         body{ font-family: sans-serif;
-        
+        background:url("Blue Texture Jewish Yom Kippur Card.png");
         
         }
-   .scene {
-  
-
+  .scene {
   width: 550px;
   height: 520px;
   border: 1px solid #ffffff;
@@ -45,10 +43,11 @@
   width: 80%;*/
 
   
-  position: relative;
+  position:relative;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
@@ -186,14 +185,23 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
+.bf
+{
+  background-color: aliceblue;
+  color:black;
+  padding:12px 24px;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+  text-align: center;
+  float:right;
+}
 </style>
 </head>
 <body>
     
-  <a id="myBtn">Signup</a>
+ <!---- <a class="scene">Click here to show the popup</a>-->
+ <a href="hijad/Responsive-Login-Form-master/index.html" class="bf">Login</a>
     <div class="scene scene--card">
         <div  ID="myModal" class="card">
           <div class="card__face card__face--front">
@@ -256,9 +264,9 @@ button:hover {
               
               
           
-                
+    
                 <!---- <div class="clearfix">-->
-                 <span><button type="submit"    class="signupbtn"  onclick="showNext()">Next</button></span>
+                 <span> <button type="submit"    class="signupbtn"  onclick="showNext()">Next</button></span>
                 
             
                 </div>
@@ -269,7 +277,7 @@ button:hover {
                <br>
                <br>
                <label for="Gender:"><b>Gender</b></label>
-               <select class="first" data-placeholder="Select an option" name="selectFirstTime"  id="selectFirstTime" >
+               <select class="first" data-placeholder="Select an option" name="selectFirstTime" id="selectFirstTime" >
                 <option value="none" style="display:none">Select an option</option>
                   <option value="wbst">Female</option>
                   <option value="ecom">Male</option>
@@ -315,8 +323,8 @@ button:hover {
             <label for="password"><b>Repeat Password</b></label>
             <input type="password" placeholder="" name="Password" required>
             <br>
-          <span> <button type="submit"    class="signupbtn"  onclick="showsubmit()">Submit</button></span>
-            
+          <span> <button type="submit"   href="congratulations/congo.html" class="signupbtn"  onclick="showsubmit()">Submit</button></span>
+           <!---- <a href="congratulations/congo.html" class=button ></a>-->
         </div>
         </div>
       </div>
@@ -345,30 +353,48 @@ span.onclick = function() {
 </script>
 <script>
   // Get the modal
-  var card= document.getElementByClassName("myModal");
+ // var card= document.getElementByClassName("myModal");
   
   // Get the button that opens the modal
-  var a = document.getElementById("myBtn");
+ // var button = document.getElementById("myBtn");
   
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+ // var span = document.getElementsByClassName("close")[0];
   
   // When the user clicks the button, open the modal 
-  a.onclick = function() {
-    card.style.display = "block";
-  }
+ // button.onclick = function() {
+   // card.style.display = "block";
+//  }
   
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    card.style.display = "none";
-  }
+  //span.onclick = function() {
+    //card.style.display = "none";
+ // }
   
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == card) {
-      card.style.display = "none";
-    }
-  }
+  //window.onclick = function(event) {
+   // if (event.target == card) {
+     // card.style.display = "none";
+    //}
+ // }
+  </script>
+
+  <script>
+
+$(window).load(function () {
+    $(".scene").click(function(){
+       $('.card').show();
+    });
+    $('.card').click(function(){
+        $('.card').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.card').hide();
+    });
+});
+
+
+
   </script>
   
 </html>

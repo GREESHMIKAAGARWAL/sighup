@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta  name="viewport"
+   content="width=device-width, initial-scale=1.0">
+  <title>Congo</title>
+  <style>
+      html{
+        background-image: url("1.PNG") ;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        width: 100%;
+        height:auto;
+      }
+  </style>
+  
+</head>
+<body>
+    
+</body>
+<script src="./confetti.js"></script>
+    <script>
+
+        const startit = () => {
+            setTimeout(function()
+            {
+                console.log("start");
+                confetti.start();
+              },  1000);
+            
+
+            
+        };
+        const stopit = () => {
+            setTimeout(function()
+            {
+                console.log("stop");
+                confetti.stop();
+              },  8000);
+             
+        };
+        startit();
+        stopit();
+
+    </script>
+
+
+
+
+</html>
+
